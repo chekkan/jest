@@ -1002,7 +1002,6 @@ class Runtime {
       fn,
       genMockFromModule: (moduleName: string) =>
         this._generateMock(from, moduleName),
-      getRealSystemTime: () => _getFakeTimers().getRealSystemTime(),
       getTimerCount: () => _getFakeTimers().getTimerCount(),
       isMockFunction: this._moduleMocker.isMockFunction,
       isolateModules,
@@ -1021,7 +1020,6 @@ class Runtime {
         _getFakeTimers().advanceTimersByTime(msToRun),
       setMock: (moduleName: string, mock: Object) =>
         setMockFactory(moduleName, () => mock),
-      setSystemTime: (now?: number) => _getFakeTimers().setSystemTime(now),
       setTimeout,
       spyOn,
       unmock,
