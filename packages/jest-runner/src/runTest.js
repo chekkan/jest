@@ -89,7 +89,6 @@ async function runTestInternal(
   if (customEnvironment) {
     testEnvironment = getTestEnvironment({
       ...config,
-      // $FlowFixMe
       testEnvironment: customEnvironment,
     });
   }
